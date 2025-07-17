@@ -69,13 +69,14 @@ Received: </pre>
 Still no TX from "mmwave TX" on "debugger pin7" in TX window.
 
   
-Summery: 
+Summary: 
   - There seems to be some disconnect on the debugger device or code for data from XIAO or sensors to the debugger device.  
   - The debugger passthrough is not working (per my thoughts on its purpose.)  
   - Pin 6 RX on the debugger will display sensor TX even without a XIAO connected. This could lead to misleading test results while debugging.  
       - XIAO pin6 lose connection would still display RX data on degugger.  
       - Code error for XIAO on e.g. wrong pin, would still display RX on the debugger.  
-  -note: nothing on debugger from the debugger onboard GROVE connector. maybe it was not designed to be used in that way.  
+  -note: nothing on debugger from the debugger onboard GROVE connector. maybe it was not designed to be used in that way.
+  -note: noticed about a 5 second lag in the RX window of the debugger with serial input.
 
 
 
