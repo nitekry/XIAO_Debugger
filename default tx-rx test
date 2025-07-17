@@ -1,0 +1,28 @@
+//Serial debug test on default TX/RX Pins
+unsigned int counter = 0;
+
+void setup() {
+  //USB console
+  Serial.begin(115200);
+  while (!Serial);
+
+  Serial1.begin(9600);
+
+  Serial.println("UART TX/RX Echo Started");
+}
+
+void loop() {
+  //TX count
+  String message = "Hello World #" + String(counter++);
+  Serial1.println(message);
+  Serial.println("Sent: " + message);
+
+  //RX Listen/Echo
+  while (Serial1.available()) {
+    char received = Serial1.read();
+    Serial.print("Received: ");
+    Serial.println(received);
+  }
+
+  delay(3000);  //
+}
