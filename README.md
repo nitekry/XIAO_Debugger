@@ -96,7 +96,18 @@ Still no passthrough even when board is confirmed. before or after starting seri
 
 
 
-
+Update:  
+  - XIAO RP2350  
+    - detected correctly  
+    - passthrough with IDE failed
+<pre>  
+Resetting /dev/cu.usbmodem114201
+Converting to uf2, output size: 159744, start address: 0x2000
+Scanning for RP2040 devices
+No drive to deploy.
+Failed uploading: uploading error: exit status 1
+</pre>
+  - 
 
 
 
